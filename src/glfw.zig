@@ -701,7 +701,7 @@ pub fn getWindowSize(window: ?*Window, width: *c_int, height: *c_int) !void{
 }
 
 extern fn glfwSetWindowSizeLimits(window: ?*Window, minwidth: c_int, minheight: c_int, maxwidth: c_int, maxheight: c_int) void;
-pub fn setWindowSizeLimits(window: ?*Window, minwidth: c_int, minheight: c_int, maxwidth: c_int, maxheight: c_int) void{
+pub fn setWindowSizeLimits(window: ?*Window, minwidth: c_int, minheight: c_int, maxwidth: c_int, maxheight: c_int) !void{
     glfwSetWindowSizeLimits(window, minwidth, minheight, maxwidth, maxheight);
     try errorCheck();
 }
